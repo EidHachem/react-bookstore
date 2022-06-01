@@ -1,0 +1,19 @@
+.btn {
+  width: 5em;
+  height: 2.5em;
+  color: #fff;
+  background-color: hsl(311, 22%, 30%);
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:focus,
+.btn:hover {
+  background-color: hsl(311, 22%, 60%);
+}
+
+.btn:active {
+  background-color: #fff;
+  border: 1px solid hsl(311, 22%, 30%);
+  color: hsl(311, 22%, 30%);
+}

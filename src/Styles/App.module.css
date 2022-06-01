@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2e4045;
+}
+
+.navigation {
+  display: flex;
+  gap: 3em;
+}
+
+.navigation > * {
+  text-decoration: none;
+  color: #2e4045;
+  font-size: 1.1rem;
+}
