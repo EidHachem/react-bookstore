@@ -46,7 +46,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Setup
 
--Clone the git repo using this command: **git clone git@github.com:EidHachem/react-bookstore.git**
+-Clone the git repo using this command: **`git clone git@github.com:EidHachem/react-bookstore.git`**
 
 ## Run tests
 
