@@ -60,9 +60,9 @@ To get a local copy up and running follow these simple example steps.
 
 > npm test
 
-## Live Demo (Not available yet)
+## Live Demo
 
-- [Go live]()
+- [Go live](https://exquisite-meerkat-9e66b5.netlify.app/)
 
 ## Author
 
