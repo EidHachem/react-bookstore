@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  margin-top: 10em;
+}
+
+.text {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  word-spacing: 0.5rem;
+}

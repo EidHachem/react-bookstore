@@ -1,14 +1,25 @@
 const ADD_BOOK = 'react-bookstore/books/ADD_BOOK';
 const DELETE_BOOK = 'react-bookstore/books/DELETE_BOOK';
 
-const INITIAL_STATE = [];
+const INITIAL_STATE = [
+  {
+    title: 'For one more day',
+    author: 'Mitch Albom',
+    id: 1,
+  },
+  {
+    title: 'Origin Story',
+    author: 'David Christian',
+    id: 2,
+  },
+];
 
-export default function booksReducer(state = INITIAL_STATE, action = {}) {
+export default function booksReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case ADD_BOOK:
       return state.concat(action.payload);
     case DELETE_BOOK:
-      return { ...state, payload: state.filter((book) => book.id !== action.payload) };
+      return [...state.filter((book) => (book.id !== action.payload))];
     default:
       return state;
   }
