@@ -1,34 +1,71 @@
-const ADD_BOOK = 'react-bookstore/books/ADD_BOOK';
-const DELETE_BOOK = 'react-bookstore/books/DELETE_BOOK';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const INITIAL_STATE = [
-  {
-    title: 'For one more day',
-    author: 'Mitch Albom',
-    id: 1,
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BMvpAkdjDz2Abw0Xbn6L/books/';
+
+const initialState = {
+  books: [],
+};
+
+export const getBooks = createAsyncThunk('books/getbooks', async () => {
+  const response = await fetch(url);
+  const data = await response.json();
+  const books = [Object.keys(data).map((key) => (
+    {
+      id: key,
+      ...data[key][0],
+    }
+  ))];
+  return books;
+});
+
+export const addBook = createAsyncThunk(
+  'books/addBook', async (payload, thunkAPI) => {
+    await fetch(`${url}`, {
+      method: 'POST',
+      body: JSON.stringify({
+        item_id: payload.id,
+        title: payload.title,
+        author: payload.author,
+        category: payload.category,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then(() => thunkAPI.dispatch(getBooks()));
+    const { books } = thunkAPI.getState().books;
+    return books;
   },
-  {
-    title: 'Origin Story',
-    author: 'David Christian',
-    id: 2,
+);
+
+export const removeBook = createAsyncThunk(
+  'books/removeBook', async (payload, thunkAPI) => {
+    await fetch(`${url}${payload}`, {
+      method: 'DELETE',
+    }).then(() => thunkAPI.dispatch(getBooks()));
+    const { books } = thunkAPI.getState().books;
+    return books;
   },
-];
+);
 
-export default function booksReducer(state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case ADD_BOOK:
-      return state.concat(action.payload);
-    case DELETE_BOOK:
-      return [...state.filter((book) => (book.id !== action.payload))];
-    default:
-      return state;
-  }
-}
+const bookSlice = createSlice({
+  name: 'book',
+  initialState,
+  reducers: {},
+  extraReducers: {
+    [getBooks.fulfilled]: (state, action) => {
+      const updatedState = state;
+      const newStore = action.payload[0];
+      updatedState.books = newStore;
+    },
+    [addBook.fulfilled]: (state, action) => {
+      const updatedState = state;
+      updatedState.books = action.payload;
+    },
+    [removeBook.fulfilled]: (state, action) => {
+      const updatedState = state;
+      updatedState.books = action.payload;
+    },
+  },
+});
 
-export function addBook(book) {
-  return { type: ADD_BOOK, payload: book };
-}
-
-export function deleteBook(id) {
-  return { type: DELETE_BOOK, payload: id };
-}
+export default bookSlice.reducer;

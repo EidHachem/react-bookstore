@@ -6,28 +6,36 @@ import { addBook } from '../redux/books/books';
 
 export default function Form() {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [formData, setFormData] = useState({
+    id: Math.random() * 100,
+    title: '',
+    author: '',
+    category: '',
+  });
 
   const addBookHandler = (e) => {
     e.preventDefault();
     dispatch(
-      addBook({
-        id: Math.random() * 100,
-        title,
-        author,
-      }),
+      addBook(formData),
     );
-    setTitle('');
-    setAuthor('');
+    setFormData({
+      id: Math.random() * 100,
+      title: '',
+      author: '',
+      category: '',
+    });
   };
 
-  const titleChangeHandler = (e) => {
-    setTitle(e.target.value);
-  };
-
-  const authorChangeHandler = (e) => {
-    setAuthor(e.target.value);
+  const changeHandler = (e) => {
+    const {
+      name, value, type, checked,
+    } = e.target;
+    setFormData((prevFormData) => (
+      {
+        ...prevFormData,
+        [name]: type === 'checkbox' ? checked : value,
+      }
+    ));
   };
 
   return (
@@ -38,16 +46,34 @@ export default function Form() {
           className={classes.title}
           type="text"
           placeholder="Enter book title"
-          value={title}
-          onChange={titleChangeHandler}
+          value={formData.title}
+          name="title"
+          onChange={changeHandler}
         />
         <input
           className={classes.author}
           type="text"
           placeholder="Enter book author"
-          value={author}
-          onChange={authorChangeHandler}
+          value={formData.author}
+          name="author"
+          onChange={changeHandler}
         />
+        <select
+          name="category"
+          id="category"
+          onChange={changeHandler}
+          className={classes.category}
+        >
+          <option value="">Categories</option>
+          <option value="Action">Action</option>
+          <option value="Comic">Comics</option>
+          <option value="Classic">Classic</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Historical">Historical</option>
+          <option value="Novel">Novel</option>
+          <option value="Magazine">Magazine Article</option>
+          <option value="Scientific">Scientific</option>
+        </select>
         <Button content="Add Book" type="submit" />
       </form>
     </>

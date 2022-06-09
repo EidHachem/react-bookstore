@@ -5,7 +5,8 @@
 }
 
 .title,
-.author {
+.author,
+.category {
   width: 15em;
   min-height: 2em;
   border: 1px solid #5e3c58;
@@ -14,7 +15,8 @@
 }
 
 .title:focus,
-.author:focus {
+.author:focus,
+.category:focus {
   border-color: #c7bbc9;
   outline: 0;
 }
