@@ -12,8 +12,9 @@
   min-height: 2em;
   border: 1px solid #e8e8e8;
   border-radius: 5px;
-  padding: 0.5em;
+  padding: 1em;
   background-color: #fff;
+  color: #726d6d;
 }
 
 .title:focus,
@@ -26,7 +27,7 @@
 .header {
   background-color: #f5f6fa;
   color: #888;
-  width: 10.875rem;
+  width: 30.875rem;
   height: 1.5rem;
   margin: 1.813rem 32.75rem 1.188rem 0;
   font-size: 1.25rem;

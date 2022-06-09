@@ -3,7 +3,7 @@
   border-bottom: 1px solid lightgray;
   display: flex;
   align-items: center;
-  gap: 3em;
+  justify-content: space-between;
   width: 100%;
   margin: 0 auto;
   padding: 1.5em;
@@ -21,6 +21,7 @@
 .navigation {
   display: flex;
   gap: 3em;
+  margin-left: -50%;
 }
 
 .navigation > * {
@@ -32,4 +33,20 @@
 .navigation > *:active,
 .navigation > *:focus {
   font-weight: 700;
+}
+
+.iconDiv {
+  align-self: end;
+  height: 30px;
+  width: 30px;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: #0290ff;
 }
