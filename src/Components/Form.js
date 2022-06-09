@@ -40,7 +40,7 @@ export default function Form() {
 
   return (
     <>
-      <h2>Add A Book</h2>
+      <h2 className={classes.header}>ADD NEW BOOK</h2>
       <form className={classes.form} onSubmit={addBookHandler}>
         <input
           className={classes.title}
@@ -65,7 +65,7 @@ export default function Form() {
           className={classes.category}
         >
           <option value="">Categories</option>
-          <option value="Action">Action</option>
+          <option value="Action">Business</option>
           <option value="Comic">Comics</option>
           <option value="Classic">Classic</option>
           <option value="Fantasy">Fantasy</option>

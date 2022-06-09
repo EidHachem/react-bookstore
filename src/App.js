@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes, Link } from 'react-router-dom';
+import { FaUserAlt } from 'react-icons/fa';
 import { getBooks } from './redux/books/books';
 import Books from './Components/Books';
 import Categories from './Components/Categories';
@@ -22,6 +23,9 @@ function App() {
         <div className={classes.navigation}>
           <Link to="/">Books</Link>
           <Link to="/categories">Categories</Link>
+        </div>
+        <div className={classes.iconDiv}>
+          <FaUserAlt className={classes.icon} />
         </div>
       </nav>
       <Routes>

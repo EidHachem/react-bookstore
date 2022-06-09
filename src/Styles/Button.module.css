@@ -1,20 +1,20 @@
 .btn {
-  width: fit-content;
-  height: max-content;
-  color: #fff;
-  background-color: hsl(311, 22%, 30%);
+  width: 11.5rem;
+  height: 2.5rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
   border: none;
-  border-radius: 5px;
-  padding: 1em;
+  background-color: hsl(206, 100%, 50%);
+  color: #fff;
 }
 
 .btn:focus,
 .btn:hover {
-  background-color: hsl(311, 22%, 60%);
+  background-color: hsl(206, 100%, 60%);
 }
 
 .btn:active {
-  background-color: #fff;
-  border: 1px solid hsl(311, 22%, 30%);
-  color: hsl(311, 22%, 30%);
+  background-color: hsl(206, 100%, 30%);
+  color: #fff;
 }

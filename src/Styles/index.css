@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap');
 
 *,
 *::before,
@@ -9,7 +10,16 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
-  background-color: #83adb5;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
   color: #2e4045;
+}
+
+.chart {
+  max-width: 100px;
+  border: none;
+}
+
+.tsdev-donut-chart .chart-wrapper {
+  border: none;
 }

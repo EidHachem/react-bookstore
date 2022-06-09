@@ -84,7 +84,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone who will take a glance to this project
+- The design was inspired by Zeplin project `Bookstore CMS`
 
 ## 📝 License
 

@@ -1,25 +1,52 @@
 .navbar {
+  background-color: #fff;
+  border-bottom: 1px solid lightgray;
   display: flex;
   align-items: center;
-  gap: 3em;
-  width: 80%;
+  justify-content: space-between;
+  width: 100%;
   margin: 0 auto;
+  padding: 1.5em;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .logo {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2e4045;
+  color: #0290ff;
 }
 
 .navigation {
   display: flex;
   gap: 3em;
+  margin-left: -50%;
 }
 
 .navigation > * {
   text-decoration: none;
-  color: #2e4045;
+  color: #121212;
   font-size: 1.1rem;
+}
+
+.navigation > *:active,
+.navigation > *:focus {
+  font-weight: 700;
+}
+
+.iconDiv {
+  align-self: end;
+  height: 30px;
+  width: 30px;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: #0290ff;
 }
