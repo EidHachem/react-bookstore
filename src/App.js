@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Route, Routes, Link } from 'react-router-dom';
+import { getBooks } from './redux/books/books';
 import Books from './Components/Books';
 import Categories from './Components/Categories';
 import classes from './Styles/App.module.css';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
+
   return (
     <>
       <nav className={classes.navbar}>

@@ -58,14 +58,22 @@ export default function Form() {
           name="author"
           onChange={changeHandler}
         />
-        <input
-          className={classes.category}
-          type="text"
-          placeholder="Enter book category"
-          value={formData.category}
+        <select
           name="category"
+          id="category"
           onChange={changeHandler}
-        />
+          className={classes.category}
+        >
+          <option value="">Categories</option>
+          <option value="Action">Action</option>
+          <option value="Comic">Comics</option>
+          <option value="Classic">Classic</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Historical">Historical</option>
+          <option value="Novel">Novel</option>
+          <option value="Magazine">Magazine Article</option>
+          <option value="Scientific">Scientific</option>
+        </select>
         <Button content="Add Book" type="submit" />
       </form>
     </>
