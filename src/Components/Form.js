@@ -6,28 +6,36 @@ import { addBook } from '../redux/books/books';
 
 export default function Form() {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [formData, setFormData] = useState({
+    id: Math.random() * 100,
+    title: '',
+    author: '',
+    category: '',
+  });
 
   const addBookHandler = (e) => {
     e.preventDefault();
     dispatch(
-      addBook({
-        id: Math.random() * 100,
-        title,
-        author,
-      }),
+      addBook(formData),
     );
-    setTitle('');
-    setAuthor('');
+    setFormData({
+      id: Math.random() * 100,
+      title: '',
+      author: '',
+      category: '',
+    });
   };
 
-  const titleChangeHandler = (e) => {
-    setTitle(e.target.value);
-  };
-
-  const authorChangeHandler = (e) => {
-    setAuthor(e.target.value);
+  const changeHandler = (e) => {
+    const {
+      name, value, type, checked,
+    } = e.target;
+    setFormData((prevFormData) => (
+      {
+        ...prevFormData,
+        [name]: type === 'checkbox' ? checked : value,
+      }
+    ));
   };
 
   return (
@@ -38,15 +46,25 @@ export default function Form() {
           className={classes.title}
           type="text"
           placeholder="Enter book title"
-          value={title}
-          onChange={titleChangeHandler}
+          value={formData.title}
+          name="title"
+          onChange={changeHandler}
         />
         <input
           className={classes.author}
           type="text"
           placeholder="Enter book author"
-          value={author}
-          onChange={authorChangeHandler}
+          value={formData.author}
+          name="author"
+          onChange={changeHandler}
+        />
+        <input
+          className={classes.category}
+          type="text"
+          placeholder="Enter book category"
+          value={formData.category}
+          name="category"
+          onChange={changeHandler}
         />
         <Button content="Add Book" type="submit" />
       </form>

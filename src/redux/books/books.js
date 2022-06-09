@@ -1,34 +1,34 @@
-const ADD_BOOK = 'react-bookstore/books/ADD_BOOK';
-const DELETE_BOOK = 'react-bookstore/books/DELETE_BOOK';
+/* eslint-disable no-param-reassign */
+import { createSlice } from '@reduxjs/toolkit';
 
-const INITIAL_STATE = [
+const initialState = [
   {
     title: 'For one more day',
     author: 'Mitch Albom',
+    category: 'fiction',
     id: 1,
   },
   {
     title: 'Origin Story',
     author: 'David Christian',
+    category: 'fiction',
     id: 2,
   },
 ];
 
-export default function booksReducer(state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case ADD_BOOK:
-      return state.concat(action.payload);
-    case DELETE_BOOK:
-      return [...state.filter((book) => (book.id !== action.payload))];
-    default:
-      return state;
-  }
-}
+const options = {
+  name: 'books',
+  initialState,
+  reducers: {
+    addBook: (state, { payload }) => {
+      state.push(payload);
+    },
+    deleteBook: (state, { payload }) => state.filter((book) => (book.id !== payload)),
+  },
+};
 
-export function addBook(book) {
-  return { type: ADD_BOOK, payload: book };
-}
+const booksReducer = createSlice(options);
 
-export function deleteBook(id) {
-  return { type: DELETE_BOOK, payload: id };
-}
+export const { addBook, deleteBook } = booksReducer.actions;
+export const selectBooks = (state) => state.books;
+export default booksReducer.reducer;
