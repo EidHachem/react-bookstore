@@ -1,16 +1,21 @@
 .navbar {
+  background-color: #fff;
+  border-bottom: 1px solid lightgray;
   display: flex;
   align-items: center;
   gap: 3em;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  padding: 1.5em;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .logo {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2e4045;
+  color: #0290ff;
 }
 
 .navigation {
@@ -20,6 +25,11 @@
 
 .navigation > * {
   text-decoration: none;
-  color: #2e4045;
+  color: #121212;
   font-size: 1.1rem;
+}
+
+.navigation > *:active,
+.navigation > *:focus {
+  font-weight: 700;
 }
