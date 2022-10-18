@@ -3,3 +3,9 @@
   margin: 0 auto;
   margin-top: 3em;
 }
+
+@media (max-width: 768px) {
+  .main {
+    margin-top: 5em;
+  }
+}

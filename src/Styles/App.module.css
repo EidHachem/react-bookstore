@@ -50,3 +50,82 @@
 .icon {
   color: #0290ff;
 }
+
+.mobileNav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobileNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
+
+  .mobileMenu {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+  .mobileMenuLine {
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: #04233a;
+  }
+
+  .mobileNavList {
+    display: none;
+    height: 100vh;
+    min-width: 100vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3em;
+    background-color: #0290ff;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-top: 15em;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    color: #515a61;
+    min-width: 3em;
+    min-height: 1.5em;
+  }
+
+  .icon {
+    color: #fff;
+  }
+
+  .mobileNavItem {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    list-style: none;
+  }
+
+  .mobileNavItem > * {
+    text-decoration: none;
+    color: #fff;
+  }
+}

@@ -13,3 +13,9 @@
   text-transform: uppercase;
   word-spacing: 0.5rem;
 }
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 1.5rem;
+  }
+}

@@ -22,9 +22,7 @@ export default function Book() {
           <div className={classes.book}>
             <div className={classes.eachBook}>
               <p className={classes.cat}>{book.category}</p>
-              <p className={classes.title}>
-                {book.title}
-              </p>
+              <p className={classes.title}>{book.title}</p>
               <p className={classes.author}>{book.author}</p>
               &nbsp;
               <div>
@@ -60,7 +58,6 @@ export default function Book() {
             <p className={classes.chapter}>CURRENT CHAPTER</p>
             <p className={classes.currentChapter}>
               Chapter:
-              {' '}
               {Math.floor(book.id)}
             </p>
             <Button content="UPDATE PROGRESS" />

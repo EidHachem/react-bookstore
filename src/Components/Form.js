@@ -15,9 +15,7 @@ export default function Form() {
 
   const addBookHandler = (e) => {
     e.preventDefault();
-    dispatch(
-      addBook(formData),
-    );
+    dispatch(addBook(formData));
     setFormData({
       id: Math.random() * 100,
       title: '',
@@ -30,12 +28,10 @@ export default function Form() {
     const {
       name, value, type, checked,
     } = e.target;
-    setFormData((prevFormData) => (
-      {
-        ...prevFormData,
-        [name]: type === 'checkbox' ? checked : value,
-      }
-    ));
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
   };
 
   return (
@@ -58,12 +54,7 @@ export default function Form() {
           name="author"
           onChange={changeHandler}
         />
-        <select
-          name="category"
-          id="category"
-          onChange={changeHandler}
-          className={classes.category}
-        >
+        <select name="category" id="category" onChange={changeHandler} className={classes.category}>
           <option value="">Categories</option>
           <option value="Action">Business</option>
           <option value="Comic">Comics</option>
@@ -74,7 +65,7 @@ export default function Form() {
           <option value="Magazine">Magazine Article</option>
           <option value="Scientific">Scientific</option>
         </select>
-        <Button content="Add Book" type="submit" />
+        <Button content="Add Book" type="submit" margin="0" />
       </form>
     </>
   );
