@@ -1,0 +1,208 @@
+.container {
+  border: 1px solid #e8e8e8;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2em;
+  background-color: #fff;
+}
+
+.book {
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 30em;
+}
+
+.chart {
+  width: 100px;
+  height: 100px;
+}
+
+.chart > * {
+  border: none;
+}
+
+.cat {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title {
+  width: 20.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+.author {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.btns {
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  border: none;
+  background-color: inherit;
+  border-right: 1px solid #e8e8e8;
+  padding-right: 5em;
+  cursor: pointer;
+}
+
+.lastBtn {
+  border: none;
+}
+
+.percentage {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.percentageNumber {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.percentageComplete {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapter {
+  width: 10.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.currentChapter {
+  width: 6.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+  }
+
+  .eachBook {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 20em;
+    gap: 1em;
+    padding-left: 1em;
+  }
+
+  .cat {
+    width: 3rem;
+    height: 1rem;
+    margin: 0 2.438rem 0 0;
+    opacity: 0.5;
+    font-size: 0.875rem;
+    color: #121212;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 1rem;
+    width: 10em;
+    height: 1rem;
+    font-family: 'RobotoSlab', sans-serif;
+  }
+
+  .author {
+    width: 6rem;
+    height: 1rem;
+    margin: 0;
+    font-family: 'RobotoSlab', sans-serif;
+    font-size: 0.875rem;
+    color: #4386bf;
+  }
+}

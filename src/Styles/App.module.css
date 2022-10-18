@@ -1,0 +1,131 @@
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5em;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0290ff;
+}
+
+.navigation {
+  display: flex;
+  gap: 3em;
+  margin-left: -50%;
+}
+
+.navigation > * {
+  text-decoration: none;
+  color: #121212;
+  font-size: 1.1rem;
+}
+
+.navigation > *:active,
+.navigation > *:focus {
+  font-weight: 700;
+}
+
+.iconDiv {
+  align-self: end;
+  height: 30px;
+  width: 30px;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: #0290ff;
+}
+
+.mobileNav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobileNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
+
+  .mobileMenu {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+  .mobileMenuLine {
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: #04233a;
+  }
+
+  .mobileNavList {
+    display: none;
+    height: 30vh;
+    min-width: 100vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5em;
+    background-color: #0290ff;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-top: 5em;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    color: #515a61;
+    min-width: 3em;
+    min-height: 1.5em;
+  }
+
+  .icon {
+    color: #fff;
+  }
+
+  .mobileNavItem {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    list-style: none;
+  }
+
+  .mobileNavItem > * {
+    text-decoration: none;
+    color: #fff;
+  }
+}
