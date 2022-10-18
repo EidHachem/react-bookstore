@@ -93,17 +93,17 @@
 
   .mobileNavList {
     display: none;
-    height: 100vh;
+    height: 30vh;
     min-width: 100vw;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 3em;
+    gap: 1.5em;
     background-color: #0290ff;
     color: #fff;
     margin: 0;
     padding: 0;
-    padding-top: 15em;
+    padding-top: 5em;
   }
 
   .logo {

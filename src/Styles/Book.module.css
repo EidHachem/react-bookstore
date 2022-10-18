@@ -21,6 +21,10 @@
   height: 100px;
 }
 
+.chart > * {
+  border: none;
+}
+
 .cat {
   width: 3.063rem;
   height: 1.125rem;
