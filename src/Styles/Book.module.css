@@ -181,9 +181,9 @@
   }
 
   .cat {
-    margin: 0;
     width: 3rem;
     height: 1rem;
+    margin: 0 2.438rem 0 0;
     opacity: 0.5;
     font-size: 0.875rem;
     color: #121212;
