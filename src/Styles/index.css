@@ -20,10 +20,10 @@ body {
   border: none;
 }
 
-.tsdev-donut-chart .chart-wrapper {
-  border: 1px solid #fff;
-}
-
 .chart-wrapper {
   border: none;
+}
+
+.tsdev-donut-chart .chart-wrapper {
+  border: 1px solid #fff;
 }
